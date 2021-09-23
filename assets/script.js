@@ -10,9 +10,9 @@ const specChar = ["!","@","#","$","%","^","&","*","(",")"];
 function generatePassword() {
   const numChars = prompt('How many characters?');
 
-  if (numChars < 8 || numChars > 128) {
-    alert('Your password must be between 8 and 128 characters.');
-    return 'Please try again.';
+  if (!Number.isInteger(numChars) || numChars < 8 || numChars > 128) {
+    alert('Please enter an integer value between 8 and 128.')
+    return 'Please try again'
   }
 
   const isLowerCase = confirm('Lower case?');
