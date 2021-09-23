@@ -8,9 +8,9 @@ const specChar = ["!","@","#","$","%","^","&","*","(",")"];
 
 
 function generatePassword() {
-  const numChars = prompt('How many characters?');
+  const numChars = parseInt(prompt('How many characters?'));
 
-  if (!Number.isInteger(numChars) || numChars < 8 || numChars > 128) {
+  if (isNaN(numChars) || numChars < 8 || numChars > 128) {
     alert('Please enter an integer value between 8 and 128.')
     return 'Please try again'
   }
